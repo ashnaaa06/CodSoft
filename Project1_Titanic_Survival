@@ -1,75 +1,94 @@
- Titanic Survival Prediction - Logistic Regression Model
-
-
-**OVERVIEW**  
-This project uses machine learning to predict passenger survival on the Titanic. The dataset includes demographic and travel-related information for each passenger. By cleaning the data and applying a logistic regression model, we aim to identify the key factors that influenced survival rates.
+ **Titanic Survival Prediction - Logistic Regression Model**
 
 
 
-**PROBLEM STATEMENT**  
-Predict whether a passenger survived the Titanic shipwreck based on features such as age, gender, ticket class, and family connections. This is a binary classification problem (Survived: 1 or 0).
-
-
-**FEATURES USED**  
-After data cleaning and feature engineering, the following features were used:  
-- Pclass (Passenger class)  
-- Sex (Encoded: male=1, female=0)  
-- Age (Missing values filled with median)  
-- SibSp (Siblings/Spouses aboard)  
-- Parch (Parents/Children aboard)  
-- Fare (Ticket fare)  
-- Embarked (Port: C=0, Q=1, S=2)  
-- Title (Extracted from name and encoded)  
-- FamilySize (SibSp + Parch + 1)  
-- IsAlone (1 = Alone, 0 = Not Alone)
+ **OVERVIEW**  
+This project uses machine learning to predict passenger survival on the Titanic. The dataset includes demographic and travel-related information for each passenger. By cleaning the data and applying a Logistic Regression model, we aim to identify the key factors that influenced survival rates.
 
 
 
-**DATA PREPROCESSING**  
+ **PROBLEM STATEMENT**  
+Predict whether a passenger survived the Titanic shipwreck based on features such as age, gender, ticket class, and family connections.  
+This is a binary classification problem (Survived: 1 or 0).
+
+
+
+ **FEATURES USED**
+
+After data cleaning and feature engineering, the following features were used:
+
+- **Pclass** – Passenger class  
+- **Sex** – Encoded (male = 1, female = 0)  
+- **Age** – Missing values filled with median  
+- **SibSp** – Number of siblings/spouses aboard  
+- **Parch** – Number of parents/children aboard  
+- **Fare** – Ticket fare  
+- **Embarked** – Port: C = 0, Q = 1, S = 2  
+- **Title** – Extracted from name and encoded  
+- **FamilySize** – SibSp + Parch + 1  
+- **IsAlone** – 1 if alone, 0 otherwise
+
+
+ **DATA PREPROCESSING**
+
 - Removed irrelevant columns: Cabin, PassengerId, Name, Ticket  
 - Filled missing Age with median, and Embarked with mode  
-- Extracted and encoded title from names  
+- Extracted and encoded titles from names  
 - Mapped categorical variables to numerical values  
 - Scaled features using StandardScaler
 
 
 
-**TOOLS & TECHNOLOGIES USED**  
-**Language:** Python  
+ **TOOLS & TECHNOLOGIES USED**
+
+**Language:**  
+Python
+
 **Libraries:**  
 pandas, numpy, matplotlib, seaborn, scikit-learn
 
 
 
-**METHODOLOGY**  
-1. Data Cleaning & Exploration  
+ **METHODOLOGY**
+
+1. Data Cleaning and Exploration  
 2. Feature Engineering  
 3. Train-Test Split (80-20)  
 4. Feature Scaling  
 5. Logistic Regression Model Training  
-6. Model Evaluation (Accuracy, Classification Report, Confusion Matrix)  
-7. Cross-Validation (cv=5)  
-8. Visualization of Survival Rates
+6. Model Evaluation using:
+   - Accuracy
+   - Classification Report
+   - Confusion Matrix  
+7. Cross-Validation (cv = 5)  
+8. Visualization of survival patterns
 
+---
 
+## **VISUALIZATION**
 
-**VISUALIZATION**  
 **Survival Count by Sex**  
-A bar chart visualizing the number of male and female passengers who survived vs. didn’t survive.
+A bar chart visualizing the number of male and female passengers who survived versus those who did not.  
+(You can save the chart using `plt.savefig("visualization.png")` to display it in the repository.)
+
+---
+
+ **MODEL PERFORMANCE**
+
+**Accuracy Score:** 78.7%  
+**Cross-Validation Score (mean):** 81%
 
 
 
-**MODEL PERFORMANCE**  
-**Accuracy Score:** 78.7% 
-
-**Cross-Validation Score:** 81%
-
-
-
-**CONCLUSION**  
-This logistic regression model effectively predicts survival using engineered features. Key influencers of survival included gender, ticket class, and whether the passenger was traveling alone.
+ **CONCLUSION**  
+This Logistic Regression model effectively predicts survival using engineered features.  
+Key influencers of survival include:  
+- Gender  
+- Ticket class  
+- Whether the passenger was traveling alone
 
 
 
-**ACKNOWLEDGEMENTS**  
-This project was created as part of the **CodSoft Data Science Internship**.
+ **ACKNOWLEDGEMENTS**  
+This project was completed as part of the CodSoft Data Science Internship.
+

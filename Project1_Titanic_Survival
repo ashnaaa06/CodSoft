@@ -6,11 +6,9 @@
 This project uses machine learning to predict passenger survival on the Titanic. The dataset includes demographic and travel-related information for each passenger. By cleaning the data and applying a Logistic Regression model, we aim to identify the key factors that influenced survival rates.
 
 
-
  **PROBLEM STATEMENT**  
 Predict whether a passenger survived the Titanic shipwreck based on features such as age, gender, ticket class, and family connections.  
 This is a binary classification problem (Survived: 1 or 0).
-
 
 
  **FEATURES USED**
